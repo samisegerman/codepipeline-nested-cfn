@@ -206,6 +206,7 @@ Resources:
                   - "iam:ListInstanceProfiles"
                   - "iam:ListInstanceProfilesForRole"
                   - "iam:RemoveRoleFromInstanceProfile"
+
                 Resource:
                   - Fn::Sub: arn:aws:iam::${AWS::AccountId}:instance-profile/Test-${AWS::StackName}-SecurityStack*
                   - Fn::Sub: arn:aws:iam::${AWS::AccountId}:instance-profile/UAT-${AWS::StackName}-SecurityStack*
@@ -227,6 +228,7 @@ Resources:
                   - "rds:ModifyDBInstance"
                   - "rds:RebootDBInstance"
                   - "rds:RemoveTagsFromResource"
+                  - "iam:CreateServiceLinkedRole"
                 Resource:
                   - Fn::Sub: arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:*
                   - Fn::Sub: arn:aws:rds:${AWS::Region}:${AWS::AccountId}:og:*
